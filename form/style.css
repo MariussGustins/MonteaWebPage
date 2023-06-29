@@ -473,6 +473,7 @@ h3 {
 
 a{
     text-decoration: none;
+    color: inherit;
 }
 
 .menu-btn a {
