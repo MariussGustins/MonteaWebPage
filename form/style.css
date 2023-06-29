@@ -787,6 +787,12 @@ footer .social-links {
     column-gap: 10px;
     padding-top: 25px;
 }
+@media only screen and (max-width: 800px)
+footer .social-links-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
 /*smaller screens format aka mobile/tablet view css*/
 /* Styles for screens smaller than 600px */
 @media screen and (max-width: 600px) {
