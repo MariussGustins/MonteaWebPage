@@ -4,6 +4,7 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, inicial-scale=1.0">
     <title>Montea</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -71,11 +72,9 @@
         }
         function toggleSwitch() {
             var participateToggle = document.getElementById("participateToggle");
-            localStorage.setItem("participate", participateToggle.checked);
+            localStorage.setItem("participate", participateToggle.checked ? "true" : "false");
         }
-        // function answerQuestion(answer) {
-        //     localStorage.setItem("participate", answer);
-        // }
+
 
         function closePopup() {
             var popupOverlay = document.querySelector(".popup-overlay");
@@ -86,7 +85,7 @@
         }
         // Function to export form data to Excel
         function exportToExcel() {
-            var participate = localStorage.getItem("participate") === "true" ? "Yes" : "No"; // Retrieve "participate" value from localStorage
+            var participate = localStorage.getItem("participate") === "true" ? "Yes" : "No";
 
             // Get form values
             var name = document.getElementById("name").value;
@@ -190,8 +189,8 @@
 </header>
 <main>
     <section class="banner" style="--vh: 9.33px;">
-        <video  autoplay="" muted="" loop="">
-            <source src="water_bg.mp4">
+        <video id="videoID" autoplay="" muted="" loop="">
+            <source src="water_bg(real).mp4">
         </video>
         <div class="gradient"></div>
         <div class="banner-content">
@@ -246,7 +245,7 @@
                 <img src="https://montea.lv/wp-content/uploads/2022/08/circle-icon3.svg" alt="Fokuss uz visaptverošu uzņēmuma apdrošināšanas aizsardzību">
                 <div class="title">Ieguvumi</div>
                 <div class="text">Daudz un dažādi ieguvumi gan vecākiem, gan bērnam, kas sevī ietver uzkrātus līdzekļus, finansiāla drošība vecāku nāves gadījumā, Mantojums bez apgrūtinājumiem, IIN atmaksa 20% no veiktajām iemaksām un citi.
-                </div>
+            </div>
 
     </section>
 
@@ -265,24 +264,22 @@
     <div class="light-blue-bg">
         <section class="page-content">
             <h2 style="text-align: center;">Sazinies ar mums</h2><br/><br/>
-            <div class="text">
-                <ul class="info">
-                    <li style="list-style: none;text-align: center;"class="item">
-                        <h4 style="font-size: 25px"><img  style="display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;" alt="call" src="icons8-calling-100%20bl.png"> Zvani mums</h4>
-                        <button class="action-button"><a style="color: black;" href="tel:+371-28-808-292">+371 28 808 292</a></button>
-                    </li>
-                    <li style="list-style: none;text-align: center;"class="item">
-                        <h4 style="font-size: 25px"><img style="display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;"  alt="" src="icons8-email-100%20bl.png"> Uzraksti mums</h4>
-                        <div class="action-button"><a style="color: black;"href="mailto:life@montea.lv">life@montea.lv</a></div>
-                    </li>
-                </ul>
+            <div class="contact-info">
+                <div class="card">
+                    <i class="card-icon far fa-envelope"></i>
+                    <p><a href="mailto:life@montea.lv">life@montea.lv</a></p>
+                </div>
 
+                <div class="card">
+                    <i class="card-icon fas fa-phone"></i>
+                    <p><a href="tel:+371-28-808-292">+371 28 808 292</a></p>
+                </div>
+
+                <div class="card">
+                    <i class="card-icon fas fa-map-marker-alt"></i>
+                    <p><a href="https://goo.gl/maps/QiW1iPPuBpByQKY77">Kalnciema Iela 104,
+                        Rīga, LV-1046</a></p>
+                </div>
             </div>
         </section>
         <section>
@@ -406,5 +403,11 @@
         </div>
     </div>
 </footer>
+<script>
+    var video = document.getElementById("videoID");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("muted", "");
+    video.play();
+</script>
 </body>
 </html>
