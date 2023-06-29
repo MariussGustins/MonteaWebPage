@@ -14,7 +14,21 @@ html {
     display: flex;
     align-items: center;
 }
-
+/*.info{*/
+/*    display: flex;*/
+/*    -webkit-box-align: start;*/
+/*    -ms-flex-align: start;*/
+/*    align-items: flex-start;*/
+/*    padding: 0px;*/
+/*    gap: 405px;*/
+/*    -ms-flex-wrap: wrap;*/
+/*    flex-wrap: wrap;*/
+/*    max-width: 900px;*/
+/*    width: 100%;*/
+/*    margin-left: auto;*/
+/*    margin-right: 125px;*/
+/*    margin-bottom: 40px;*/
+/*}*/
 
 body {
     display: flex;
@@ -618,15 +632,16 @@ a{
 }
 .thank-you-popup {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 20%;
+    left: 20%;
     transform: translate(-50%, -50%);
     background-color: #8af68a;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 300px;
+    padding: 10px;
+    border-radius: 7px;
+    max-width: 235px;
     text-align: center;
     display: none;
+    margin-left: 1314px;
 }
 
 .thank-you-popup.active {
@@ -771,6 +786,7 @@ footer .social-links {
     column-gap: 10px;
     padding-top: 25px;
 }
+/*smaller screens format aka mobile/tablet view css*/
 /* Styles for screens smaller than 600px */
 @media screen and (max-width: 600px) {
     .footer {
@@ -1263,6 +1279,81 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+.contact-info{
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+
+.card{
+    background: #2f3542;
+    padding: 0 20px;
+    margin: 0 10px;
+    width: calc(33% - 20px);
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-icon{
+    font-size: 30px;
+    background:  #95ECFD;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+
+.card:hover .card-icon{
+    background: none;
+    color: #818181;
+    transform: scale(1.6);
+}
+
+.card p{
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.card:hover p{
+    max-height: 40px;
+    opacity: 1;
+}
+.card a{
+    color: #fff;
+}
+
+
+@media screen and (max-width:800px) {
+    .contact-info{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+    .card:hover .card-icon .card:active{
+        background: none;
+        color: #818181;
+        transform: scale(1.6);
+    }
+
+}
 
 @media only screen and (max-width: 1360px) {
     header {
@@ -1541,8 +1632,161 @@ input:checked + .slider:before {
         top: 10px;
         left: 20px;
     }
+    .page-content{
+        padding: 75px 20px;
+    }
 }
+@media only screen and (max-width:320px) {
+    .circles .item:first-of-type {
+        margin-left: -85px;
+    }
+    .text .info{
+        max-width: 320px;
+        margin-right: -2px;
+        gap: 60px;
+    }
+    .text .info .item {
+        max-width: 300px;
+        width: 100%;
+    }
+    .container{
+        margin-left: 30px;
+        flex-direction: column;
+    }
+    .container .formtext {
+        width: 80%;
+    }
+    .quote {
+        font-family: 'Arial', sans-serif;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        width: 220px;
+    }
+    blockquote {
+        font-size: 18px;
+        font-style: italic;
+        line-height: 1.5;
+        color: #555555;
+        margin: 0;
+        padding: 0;
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        margin-left: 117px;
+    }
+    .button_sub {
+        margin-left: 77px;
+    }
+    .close-button {
+        right: 15px;
+        top: -235px;
+        width: 52px;
+        height: 55px;
+    }
+    .logo {
+        width: 124px;
+        height: auto;
+    }
+    .laptop {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        max-width: 100%;
+        height: auto;
+    }
+    .banner .banner-content {
+        width: 100%;
+        height: 80%;
+        position: relative;
+        padding-top: 300px;
+    }
+    .banner{
+        min-height: 546px;
+        --vh: 7.33px;
+    }
+}
+@media only screen and (max-width:390px) {
+    .circles .item:first-of-type {
+        margin-left: -45px;
+    }
+    .text .info{
+        max-width: 320px;
+        margin-right: -2px;
+        gap: 60px;
+    }
+    .text .info .item {
+        max-width: 300px;
+        width: 100%;
+    }
+    .container{
+        margin-left: 66px;
+        flex-direction: column;
+    }
+    .container .formtext {
+        width: 80%;
+    }
+    .quote {
+        font-family: 'Arial', sans-serif;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        width: 220px;
+    }
+    blockquote {
+        font-size: 18px;
+        font-style: italic;
+        line-height: 1.5;
+        color: #555555;
+        margin: 0;
+        padding: 0;
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        margin-left: 154px;
+    }
+    .button_sub {
+        margin-left: 115px;
+    }
+    .close-button {
+        right: 15px;
+        top: -235px;
+        width: 52px;
+        height: 55px;
+    }
+    .logo {
+        width: 164px;
+        height: auto;
+    }
+    .laptop {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        max-width: 100%;
+        height: auto;
+    }
+    .banner .banner-content {
+        width: 100%;
+        height: 80%;
+        position: relative;
+        padding-top: 300px;
+    }
 
+    .banner{
+        max-height: 586px;
+        min-height: 546px;
+        --vh: 7.33px;
+    }
+    .thank-you-popup {
+        margin-left: 40px;
+    }
+}
 @media only screen and (max-width: 800px) {
     footer .social-links {
         display: none;
