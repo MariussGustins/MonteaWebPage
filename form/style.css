@@ -1637,7 +1637,7 @@ input:checked + .slider:before {
         padding: 75px 20px;
     }
 }
-@media only screen and (max-width:320px) {
+@media only screen and (max-width:420px) {
     .circles .item:first-of-type {
         margin-left: -85px;
     }
