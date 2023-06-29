@@ -695,7 +695,12 @@ display: -webkit-box;
     row-gap: 32px;
 }
 
-
+.social-links-mobile {
+    -webkit-column-gap: 10px;
+    column-gap: 10px;
+    margin-bottom: 69px;
+    display: none;
+}
 
 footer .footer-flex .adress h1 {
     color: #000000;
