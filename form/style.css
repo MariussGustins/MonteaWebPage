@@ -755,7 +755,7 @@ footer .links-footer {
     -ms-flex-pack: start;
     justify-content: flex-start;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 160%;
     -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
     font-feature-settings: 'pnum' on, 'lnum' on;
