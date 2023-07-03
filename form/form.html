@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: 'Merriweather', serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      border-radius: 5px;
+    }
+
+    .other-input {
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    .submit-button {
+      border-radius: 5px;
+      padding: 10px 30px;
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background-color: #0069d9;
+    }
+    .success-message {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+    .banner video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+    video {
+      object-fit: contain;
+      overflow-clip-margin: content-box;
+      overflow: clip;
+    }
+    .banner .gradient {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: -webkit-gradient(linear, left bottom, left top, from(rgba(149, 236, 253, 0.65)), to(rgba(149, 236, 253, 0.65)));
+      background: linear-gradient(0deg, rgba(149, 236, 253, 0.65), rgba(149, 236, 253, 0.65));
+    }
+    .banner {
+      max-height: 1060px;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+      min-height: 597px;
+      width: 100%;
+      position: relative;
+    }
+    section {
+      max-width: 1920px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+  </style>
+  <script
+          src="https://code.jquery.com/jquery-3.7.0.js"
+          integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+          crossorigin="anonymous"></script>
+  <script>
+    function SubForm (event){
+      event.preventDefault();
+      $.ajax({
+        url:'https://api.apispreadsheets.com/data/2IaAUr5qQ3jGtkIo/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          showSuccessAlert();
+          clearForm();
+        },
+        error: function(){
+          showErrorAlert();
+        }
+      });
+    }
+    function showSuccessAlert() {
+      $(".success-message").removeClass("d-none");
+      $(".alert-danger").addClass("d-none");
+      setTimeout(function () {
+        $(".success-message").addClass("d-none");
+      }, 3000);
+    }
+
+    function showErrorAlert() {
+      $(".alert-danger").removeClass("d-none");
+      $(".success-message").addClass("d-none");
+    }
+
+    function clearForm() {
+      $("#myForm")[0].reset();
+    }
+  </script>
+</head>
+<body>
+<section class="banner" style="--vh: 9.33px;">
+  <video  autoplay="" muted="" loop="">
+    <source src="drop.mp4">
+  </video>
+  <div class="gradient">
+<h1><strong>Piesakies konsultācijai un piedalies izlozē!</strong></h1>
+<div class="container">
+  <div class="formtext">
+    <form id="myForm">
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Vārds" name="name" required class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" id="surname" placeholder="Uzvārds" name="surname" required class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="tel" id="phone" placeholder="Telefona numurs" name="phone" required class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="E-pasts" name="email" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="source-radio">Kur uzzināji par šo piedāvājumu?</label><br>
+        <input type="radio" id="source-radio-ad" name="source" value="Reklāma" required>
+        <label for="source-radio-ad">Reklāma</label><br>
+        <input type="radio" id="source-radio-social" name="source" value="Sociālie tīkli">
+        <label for="source-radio-social">Sociālie tīkli</label><br>
+        <input type="radio" id="source-radio-website" name="source" value="Montea mājaslapa">
+        <label for="source-radio-website">Montea mājaslapa</label><br>
+        <input type="radio" id="source-radio-friend" name="source" value="Draugs ieteica">
+        <label for="source-radio-friend">Draugs ieteica</label><br>
+        <input type="radio" id="source-radio-other" name="source" value="Cits">
+        <label for="source-radio-other">Cits</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="otherText" name="otherText" placeholder="Cits:" class="form-control other-input">
+      </div>
+      <div class="form-group">
+        <label for="yes-no-radio">Vai esi ieinteresēts/ieinteresēta šajā piedāvājumā?</label><br>
+        <input type="radio" id="yes-no-radio-yes" name="PiedalisiesIzloze" value="Yes" required>
+        <label for="yes-no-radio-yes">Jā</label><br>
+        <input type="radio" id="yes-no-radio-no" name="PiedalisiesIzloze" value="No">
+        <label for="yes-no-radio-no">Nē</label>
+      </div>
+      <center>
+        <button onclick="SubForm(event)" type="submit" class="btn btn-primary submit-button">Sūtīt pieteikumu</button>
+      </center>
+    </form>
+  </div>
+</div>
+
+<div class="alert alert-success success-message d-none" role="alert">
+  Paldies, pieteikums nosūtīts :)
+</div>
+<div class="alert alert-danger mt-3 d-none" role="alert">
+  Atvainojiet, notikusi kļūda :(
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </div>
+</section>
+</body>
+</html>
