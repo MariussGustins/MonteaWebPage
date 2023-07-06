@@ -76,8 +76,8 @@
       width: 100%;
       height: 100%;
       position: absolute;
-      background: -webkit-gradient(linear, left bottom, left top, from(rgba(149, 236, 253, 0.65)), to(rgba(149, 236, 253, 0.65)));
-      background: linear-gradient(0deg, rgba(149, 236, 253, 0.65), rgba(149, 236, 253, 0.65));
+      /*background: -webkit-gradient(linear, left bottom, left top, from(rgba(149, 236, 253, 0.65)), to(rgba(149, 236, 253, 0.65)));*/
+      /*background: linear-gradient(0deg, rgba(149, 236, 253, 0.65), rgba(149, 236, 253, 0.65));*/
     }
     .banner {
       max-height: 1060px;
@@ -92,7 +92,147 @@
       width: 100%;
       margin: 0 auto;
       position: relative;
+
     }
+    .banner img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+
+    }
+    .bubble-fluid {
+      position: fixed;
+      bottom: -191px;
+      right: -128px;
+      width: 569px;
+      height: 494px;
+      transform: rotate(140deg);
+      z-index: 9998;
+      opacity: 1;
+    }
+    .container1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end; /* Align buttons to the right */
+      width: 200px;
+      position: fixed;
+      bottom: 40px; /* Adjust the desired distance from the bottom */
+      right: 110px; /* Adjust the desired distance from the right */
+      z-index: 9999;
+    }
+
+    .container1 .btn {
+      height: 50px;
+      margin: 20px;
+      position: relative;
+      width: 155px;
+    }
+
+    .container1 .btn a {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+      color: #fff;
+      display: flex;
+      font-size: 18px;
+      font-weight: 700;
+      left: 0;
+      top: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      letter-spacing: 1px;
+      text-decoration: none;
+      overflow: hidden;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(15px);
+      z-index: 1;
+      transition: 0.5s;
+    }
+
+    .container1 .btn:hover a {
+      letter-spacing: 2px;
+    }
+
+    .container1 .btn a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to left, rgba(255,255,255,0.15), transparent);
+      transform: skewX(45deg) translateX(0);
+      transition: 0.5s;
+    }
+
+    .container1 .btn:hover a::before {
+      transform: skewX(45deg) translateX(200%);
+    }
+
+    .container1 .btn::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -5px;
+      height: 10px;
+      width: 30px;
+      background: rgb(8, 107, 183);
+      border-radius: 10px;
+      transition: 0.5s;
+      transition-delay: 0s;
+    }
+
+    .container1 .btn:hover::before {
+      bottom: 0;
+      height: 50%;
+      width: 80%;
+      border-radius: 30px;
+      transition-delay: 0.5s;
+    }
+
+    .container1 .btn::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -5px;
+      height: 10px;
+      width: 30px;
+      background: rgb(7, 95, 189);
+      border-radius: 10px;
+      transition: 0.5s;
+      transition-delay: 0s;
+    }
+
+    .container1 .btn:hover::after {
+      top: 0;
+      height: 50%;
+      width: 80%;
+      border-radius: 30px;
+      transition-delay: 0.5s;
+    }
+
+    .container1 .btn:nth-child(1):before,
+    .container1 .btn:nth-child(1)::after {
+      background: #2bd2ff;
+      box-shadow: 0 0 5px #2bd2ff,
+      0 0 15px #2bd2ff,
+      0 0 30px #2bd2ff,
+      0 0 60px #2bd2ff;
+    }
+
+    .container1 .btn:active a {
+      color: #000;
+    }
+
   </style>
   <script
           src="https://code.jquery.com/jquery-3.7.0.js"
@@ -133,10 +273,19 @@
   </script>
 </head>
 <body>
+
 <section class="banner" style="--vh: 9.33px;">
-  <video  autoplay="" muted="" loop="">
-    <source src="drop.mp4">
-  </video>
+  <div class="bubble-fluid">
+    <img src="v962-aum-34_1-removebg-preview.png" alt="bubble">
+  </div>
+<!--  <video  autoplay="" muted="" loop="">-->
+<!--    <source src="drop.mp4">-->
+<!--  </video>-->
+  <img src="background4.jpg" alt="background img">
+  <div class="container1">
+    <div class="btn"><a href="./index.html">MONTEA</a></div>
+  </div>
+
   <div class="gradient">
 <h1><strong>Piesakies konsultācijai un piedalies izlozē!</strong></h1>
 <div class="container">
@@ -146,18 +295,18 @@
         <input type="text" id="name" placeholder="Vārds" name="name" required class="form-control">
       </div>
       <div class="form-group">
-        <input type="text" id="surname" placeholder="Uzvārds" name="surname" required class="form-control">
+        <input type="text" id="surname" placeholder="Uzvārds" name="surname"  class="form-control">
       </div>
       <div class="form-group">
         <input type="tel" id="phone" placeholder="Telefona numurs" name="phone" required class="form-control">
       </div>
       <div class="form-group">
-        <input type="email" id="email" placeholder="E-pasts" name="email" required class="form-control">
+        <input type="email" id="email" placeholder="E-pasts" name="email"  class="form-control">
       </div>
       <div class="form-group">
         <label for="source-radio">Kur uzzināji par šo piedāvājumu?</label><br>
         <input type="radio" id="source-radio-ad" name="source" value="Reklāma" required>
-        <label for="source-radio-ad">Reklāma</label><br>
+        <label for="source-radio-ad">Slimnīca</label><br>
         <input type="radio" id="source-radio-social" name="source" value="Sociālie tīkli">
         <label for="source-radio-social">Sociālie tīkli</label><br>
         <input type="radio" id="source-radio-website" name="source" value="Montea mājaslapa">
@@ -171,7 +320,7 @@
         <input type="text" id="otherText" name="otherText" placeholder="Cits:" class="form-control other-input">
       </div>
       <div class="form-group">
-        <label for="yes-no-radio">Vai esi ieinteresēts/ieinteresēta šajā piedāvājumā?</label><br>
+        <label for="yes-no-radio">Vai vēlies piedalīties izlozē?</label><br>
         <input type="radio" id="yes-no-radio-yes" name="PiedalisiesIzloze" value="Yes" required>
         <label for="yes-no-radio-yes">Jā</label><br>
         <input type="radio" id="yes-no-radio-no" name="PiedalisiesIzloze" value="No">
