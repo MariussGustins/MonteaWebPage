@@ -2,7 +2,16 @@ html {
     width: 100%; /* Set the desired width */
     margin: 0 auto; /* Center the HTML content horizontally */
 }
-
+.bubble-fluid {
+    position: absolute;
+    top: -188px;
+    left: 1072px;
+    width: 100%;
+    height: 100%;
+    transform: rotate(343deg);
+    z-index: -1;
+    opacity: 0.5; /* Adj    ust the opacity as desired */
+}
 body {
     display: flex;
     flex-direction: column;
@@ -409,6 +418,8 @@ footer {
     width: 100%;
     max-width: 1920px;
     position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 .footer-wrap {
     margin: 0 auto;
@@ -468,7 +479,6 @@ footer .footer-flex .contact .email {
     color: #111111;
     margin-left: auto;
     margin-right: 0;
-    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -1653,7 +1663,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         display: none;
     }
     .raksts.page-break {
-        margin-top: 30px;
+        margin-top: 90px;
     }
     .raksts.page-break img:nth-child(n+3) {
         display: none;
@@ -1797,6 +1807,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     }
     footer .footer-flex .contact .email {
         margin: 0;
+    }
+}
+@media only screen and (min-width: 390px){
+    .kontakti-flex .text .name {
+        max-width:300px;
+        margin-left: -176px;
     }
 }
 
