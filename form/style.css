@@ -420,6 +420,8 @@ footer {
     width: 100%;
     max-width: 1920px;
     position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 .footer-wrap {
     margin: 0 auto;
@@ -528,6 +530,28 @@ footer .social-links {
     column-gap: 10px;
     padding-top: 25px;
 }
+
+.bubble-fluid {
+    position: absolute;
+    top: -188px;
+    left: 1072px;
+    width: 100%;
+    height: 100%;
+    transform: rotate(343deg);
+    z-index: -1;
+    opacity: 0.5; /* Adj    ust the opacity as desired */
+}
+.bubble-fluid_top {
+    position: absolute;
+    top: -18px;
+    left: 172px;
+    width: 100%;
+    height: 100%;
+    transform: rotate(343deg);
+    z-index: -1;
+    opacity: 0.5; /* Adj    ust the opacity as desired */
+}
+
 /*smaller screens format aka mobile/tablet view css*/
 /* Styles for screens smaller than 600px */
 @media screen and (max-width: 600px) {
@@ -1040,6 +1064,19 @@ input:checked + .slider:before {
 }
 .btn_bubble{
     margin-left:474px;
+}
+
+.banner-btn_s{
+    margin-top: 15px;
+}
+.btn_bubble_s{
+    margin-left:313px;
+}
+.banner-btn_d{
+    margin-top: -128px;
+}
+.btn_bubble_s{
+    margin-left:313px;
 }
 .menu {
     position: fixed;
@@ -1717,9 +1754,11 @@ header .header-menu .menu-btn {
     .banner-btn{
         margin-top: -4px;
     }
+
     .btn_bubble{
         margin-left:115px;
     }
+
     .header-menu a {
         display: none;
     }
