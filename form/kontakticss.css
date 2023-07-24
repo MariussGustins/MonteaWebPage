@@ -1,0 +1,2002 @@
+html {
+    width: 100%; /* Set the desired width */
+    margin: 0 auto; /* Center the HTML content horizontally */
+}
+.bubble-fluid {
+    position: absolute;
+    top: -91px;
+    left: 1093px;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*transform: rotate(343deg);*/
+    z-index: -1;
+    opacity: 1; /* Adj    ust the opacity as desired */
+}
+.bubble-fluid img{
+    width: 626px;
+    height: 762px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: 'Merriweather', serif;
+    margin: 0 auto;
+}
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+}
+.kontakti-flex .text .name {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 130%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2A2A2A;
+    margin-bottom: 40px;
+    margin-left:-277px;
+}
+
+header {
+    margin: 0 auto;
+    width: 90%;
+    padding: 25px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;
+    height: 120px;
+    z-index: 1;
+}
+.raksts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+raksts.center {
+    margin-top: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.raksts.right {
+    margin-top: 0;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+.raksts.page-break {
+    margin-top: 170px;
+}
+.raksts.page-break2{
+    margin-top: -5px;
+}
+img {
+    max-width: 120%;
+    display: block;
+}
+
+.logo {
+    width: 200px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
+    /*margin-bottom: 20px;*/
+    display: block;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: 195px;
+    height: 80px;
+}
+.header-menu {
+    display: flex;
+    justify-items: flex-end;
+    column-gap: 10px;
+    box-sizing: border-box;
+    padding: 8px 0;
+}
+.header-content{
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container-right {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70px;
+    padding: 0 20px;
+    position: relative;
+}
+* {box-sizing:border-box}
+
+.page-content {
+    padding: 100px 20px;
+    max-width: 1340px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+#myDiv {
+    display: none;
+}
+
+#myDiv.active {
+    display: block;
+    /* Add your styling for the active state here */
+}
+.social-links-mobile {
+    -webkit-column-gap: 10px;
+    column-gap: 10px;
+    margin-bottom: 69px;
+    display: none;
+}
+
+.social-links-mobile a {
+    width: 54px;
+    height: 54px;
+}
+
+.dropdown-head {
+    width: 100%;
+    padding: 10px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 130%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #111111;
+}
+
+.dropdown-head img {
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.dropdown.active .dropdown-head img {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.dropdown-content {
+    display: none;
+    padding: 20px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #111111;
+}
+@media only screen and (max-width: 1920px){
+    .hamburger {
+        display: none;
+    }
+}
+
+@media(max-width:425px) {
+    .circles .item:first-of-type {
+        margin-left: -45px;
+    }
+    .text .info{
+        max-width: 320px;
+        margin-right: -2px;
+        gap: 60px;
+    }
+    .text .info .item {
+        max-width: 300px;
+        width: 100%;
+    }
+    .container{
+        margin-left: 66px;
+        flex-direction: column;
+    }
+    .container .formtext {
+        width: 80%;
+    }
+
+    .logo {
+        width: 164px;
+        height: auto;
+    }
+    .banner .banner-content {
+        width: 100%;
+        height: 80%;
+        position: relative;
+        padding-top: 300px;
+    }
+    .banner .banner-content .banner-text {
+        bottom: 280px;
+        left: 20px;
+    }
+    .banner .banner-content h1 {
+        font-size: 40px!important;
+        line-height: 50px;
+    }
+    .banner .banner-content h2 {
+        font-size: 30px!important;
+        line-height: 26px;
+    }
+    .banner .banner-content h1 strong {
+        font-size: 50px;
+        line-height: 39px;
+    }
+    .banner{
+        max-height: 845px;
+        min-height: 845px;
+        --vh: 7.33px;
+    }
+    .banner-img{
+        border-radius: 50%;
+        max-width: 350px;
+        margin-left: 30px;
+        margin-top: 64px;
+
+    }
+    .banner-btn{
+        margin-top: -4px;
+    }
+
+    .btn_bubble{
+        margin-left:115px;
+    }
+
+    .header-menu a {
+        display: none!important;
+    }
+    header .header-menu .hamburger {
+        padding: 11.5px 8px;
+    }
+    .menu .menu-container .close-btn {
+        width: 34px;
+        height: 34px;
+        top: 20px;
+        right: 20px;
+    }
+    .logo-mob {
+        display: block;
+        margin-left: 20px;
+        margin-top: -80px;
+    }
+    .mob-dropdowns {
+        display: block;
+    }
+    .menu .menu-container {
+        padding: 120px 0 20px 0px;
+    }
+    .hamburger{
+        display: block!important;
+    }
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #95ECFD;
+    z-index: 10;
+    width: 100%;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+.menu.active {
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.menu.main .raksts {
+    margin-top: 114px;
+    margin-bottom: 96px;
+}
+
+.menu .other-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-column-gap: 2px;
+    column-gap: 2px;
+    row-gap: 2px;
+}
+
+.menu .other-links a {
+    padding: 8px 14px;
+    border: 1px transparent solid;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.menu .other-links a:hover {
+    border-color: #111;
+}
+
+.menu.products .menu-list {
+    margin-bottom: 81px;
+}
+
+.menu.products .raksts {
+    margin-bottom: 3px;
+}
+
+.menu.nozares .menu-list {
+    margin-bottom: 84px;
+}
+
+.menu.nozares .raksts {
+    margin-bottom: 7px;
+}
+
+.menu .menu-container {
+    padding: 120px 0 80px 0px;
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+/* Header menu button hover state */
+.header-menu a:hover {
+    border-color: #000000;
+}
+header .header-menu .menu-btn {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #111111;
+    padding: 14px 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    -webkit-transition: border 0.3s ease-in-out;
+    transition: border 0.3s ease-in-out;
+}
+.menu .menu-container .close-btn {
+    cursor: pointer;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 54px;
+    height: 54px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 45px;
+    right: 47px;
+}
+
+.menu .menu-wrap {
+    padding: 0 20px;
+    max-width: 1340px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu h2 {
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.menu .menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 40px;
+    column-gap: 40px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 100px;
+}
+
+.menu .menu-list .col {
+    max-width: 366px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.menu .menu-list a {
+    display: block;
+    width: 100%;
+    padding: 8px 14px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 160%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #111111;
+    margin-bottom: 2px;
+    border: 1px transparent solid;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.menu .menu-list a:hover {
+    border-color: #111;
+}
+
+
+.container {
+    /*margin-left: 75px;*/
+    /*margin-right: auto;*/
+    /*max-width: 600px;*/
+    /*padding: 0 20px;*/
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 100px;
+}
+.container .formtext{
+    max-width: 558px;
+    width: 70%;
+}
+
+.t1 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+h1 {
+    font-weight: 300;
+    font-size: 100px;
+    line-height: 110%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+h2 {
+    font-weight: 300;
+    font-size: 60px;
+    font-family: 'Merriweather', serif;
+    line-height: 130%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+h3 {
+    font-family: Merriweather, serif;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 130%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #111;
+    margin-bottom: 50px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-btn a {
+    font-weight: 400;
+    display: block;
+    padding: 14px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: Merriweather, serif;
+    color: #000;
+    transition: border-color 0.3s;
+    border: 1px solid transparent;
+}
+
+
+
+/* Header menu */
+.header-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Header menu button */
+.header-menu a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 25px;
+    font-weight: 400;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-family: Merriweather, serif;
+    color: #000;
+    transition: border-color 0.3s;
+    border: 1px solid transparent;
+}
+
+/* Header menu button hover state */
+.header-menu a:hover {
+    border-color: #000000;
+}
+
+
+footer {
+    margin: 0 auto;
+    background-color: #95ECFD;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.footer-wrap {
+    margin: 0 auto;
+    max-width: 1340px;
+    width: 100%;
+    padding: 68px 20px 37px 20px;
+}
+
+.footer-flex {
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 76px;
+    row-gap: 32px;
+}
+
+
+
+footer .footer-flex .adress h1 {
+    color: #000000;
+}
+
+footer .footer-flex .adress .t1 {
+    color: #000000;
+}
+
+footer .footer-flex .contact a {
+    display: block;
+}
+
+footer .footer-flex .contact .number {
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 130%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #111111;
+}
+
+footer .footer-flex .contact .number span {
+    color: #fff;
+}
+
+footer .footer-flex .contact .email {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #111111;
+    margin-left: auto;
+    margin-right: 0;
+    width: fit-content;
+}
+
+.footer-flex.margin-big {
+    margin-bottom: 167px;
+}
+
+.footer-flex.no-margin {
+    margin-bottom: 0;
+}
+
+footer .links-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 40px;
+    column-gap: 40px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+}
+
+/*footer .links-footer a {*/
+/*    position: relative;*/
+/*}*/
+
+
+
+footer .copyright {
+    padding-top: 2px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 160%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+}
+
+footer .social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 10px;
+    column-gap: 10px;
+    padding-top: 25px;
+}
+/*smaller screens format aka mobile/tablet view css*/
+/* Styles for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+/* Styles for screens between 601px and 1200px */
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+    .footer {
+        font-size: 16px;
+        padding: 30px;
+    }
+}
+
+/* Styles for screens larger than 1200px */
+@media screen and (min-width: 1201px) {
+    .footer {
+        font-size: 18px;
+        padding: 40px;
+    }
+}
+
+main {
+    overflow: hidden;
+}
+header.index {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+@media only screen and (max-width: 1490px) {
+    .img-wrap.pattern::after {
+        transform: none !important;
+        top: 10px !important;
+        left: 10px !important;
+    }
+    .work .content .text {
+        max-width: 700px;
+    }
+    .work .content .text h2 {
+        font-size: 40px;
+    }
+    .work .content .text h1 {
+        font-size: 80px;
+    }
+    .banner .banner-content h1 {
+        font-size: calc(4vw + 16px);
+        max-width: 320px;
+        margin-bottom: 12px;
+    }
+    .banner .banner-content h2 {
+        font-size: 20px;
+    }
+    .banner .banner-content .raksts {
+        top: 120px;
+    }
+    .banner .banner-content .raksts.bottom {
+        bottom: 100px;
+    }
+    .banner .banner-content .play-btn {
+        width: auto;
+        flex-direction: row-reverse;
+        column-gap: 7px;
+        right: auto;
+        left: 64px;
+        bottom: 215px;
+    }
+    .banner .banner-content .play-btn span {
+        transform: none;
+        max-width: 75px;
+        font-size: 10px;
+    }
+    .banner .banner-content .play-btn .btn {
+        width: 40px;
+        height: 40px;
+    }
+    .banner .banner-content .play-btn .btn img {
+        width: 14px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (max-width: 1920px){
+    .banner .banner-content h1 {
+        font-size: 100px;
+        max-width: 320px;
+        margin-bottom: 12px;
+    }
+}
+
+
+@media only screen and (max-height: 900px) {
+    .banner .banner-content h1 {
+        font-size: 40px;
+        max-width: 320px;
+        margin-bottom: 12px;
+    }
+    .banner .banner-content h2 {
+        font-size: 20px;
+    }
+    .banner .banner-content .play-btn {
+        width: auto;
+        flex-direction: row-reverse;
+        column-gap: 7px;
+        right: auto;
+        left: 64px;
+        bottom: 215px;
+    }
+    .banner .banner-content .play-btn span {
+        transform: none;
+        max-width: 75px;
+        font-size: 10px;
+    }
+    .banner .banner-content .play-btn .btn {
+        width: 40px;
+        height: 40px;
+    }
+    .banner .banner-content .play-btn .btn img {
+        width: 14px;
+        padding-left: 3px;
+    }
+    .banner .banner-content .raksts.bottom {
+        bottom: 100px;
+    }
+    .banner .banner-content .raksts {
+        top: 120px;
+    }
+}
+
+
+
+.text .info .item {
+    max-width:264px;
+    width: 100%;
+}
+.kontakti-flex .text .info .item .content {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2A2A2A;
+}
+.kontakti-flex .text .social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+}
+.text .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 558px;
+    width: 100%;
+    margin-left:auto;
+    margin-right:125px;
+    margin-bottom: 40px;
+}
+.text .info .item .title {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 160%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #8E8E8E;
+}
+.text .name {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 130%;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2A2A2A;
+    margin-bottom: 40px;
+    position: relative;
+    left:50%
+}
+
+.kontakti-flex .map {
+    max-width: 692px;
+    width: 100%;
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.kontakti-flex .map.pattern::after {
+    content: '';
+    width: 400px;
+    height: 400px;
+    border: 2px solid #95ECFD;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translateX(58px) translateY(47px);
+    transform: translateX(58px) translateY(47px);
+    z-index: -1;
+}
+
+.kontakti-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 50px;
+}
+.kontakti-flex .text {
+    max-width: 558px;
+    width: 100%;
+}
+
+.kontakti-flex .map {
+    max-width: 692px;
+    width: 100%;
+    position: relative;
+}
+.img-wrap {
+    position: relative;
+    aspect-ratio: 1/1;
+}
+
+.img-wrap.pattern::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid #95ECFD;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(20%) translateY(20%);
+    transform: translateX(20%) translateY(20%);
+    z-index: -1;
+}
+
+.img-wrap .pattern {
+    z-index: 1;
+}
+
+.img-wrap .pattern:nth-child(1) {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    top: 10px;
+    left: 10px;
+}
+
+.img-wrap .pattern:nth-child(2) {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    top: 10px;
+    right: 10px;
+}
+
+.img-wrap .pattern:nth-child(3) {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    bottom: 10px;
+    right: 10px;
+}
+
+.img-wrap .pattern:nth-child(4) {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    bottom: 10px;
+    left: 10px;
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+/* required styles */
+
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.leaflet-container {
+    overflow: hidden;
+}
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+/* Prevents IE11 from highlighting tiles in blue */
+.leaflet-tile::selection {
+    background: transparent;
+}
+
+/* hack that prevents hw layers "stretching" when loading new tiles */
+.leaflet-safari .leaflet-tile-container {
+    width: 1600px;
+    height: 1600px;
+    -webkit-transform-origin: 0 0;
+}
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+    display: block;
+}
+/* .leaflet-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
+/* .leaflet-container img: map is broken in FF if you have max-width: 100% on tiles */
+.leaflet-container .leaflet-overlay-pane svg,
+.leaflet-container .leaflet-marker-pane img,
+.leaflet-container .leaflet-shadow-pane img,
+.leaflet-container .leaflet-tile-pane img,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-tile {
+    max-width: none !important;
+    max-height: none !important;
+}
+
+.leaflet-container.leaflet-touch-zoom {
+    -ms-touch-action: pan-x pan-y;
+    touch-action: pan-x pan-y;
+}
+.leaflet-container.leaflet-touch-drag {
+    -ms-touch-action: pinch-zoom;
+    /* Fallback for FF which doesn't support pinch-zoom */
+    touch-action: none;
+    touch-action: pinch-zoom;
+}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+    -ms-touch-action: none;
+    touch-action: none;
+}
+.leaflet-container {
+    -webkit-tap-highlight-color: transparent;
+}
+.leaflet-container a {
+    -webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
+}
+.leaflet-tile {
+    filter: inherit;
+    visibility: hidden;
+}
+.leaflet-tile-loaded {
+    visibility: inherit;
+}
+.leaflet-zoom-box {
+    width: 0;
+    height: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 800;
+}
+/* workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=888319 */
+.leaflet-overlay-pane svg {
+    -moz-user-select: none;
+}
+
+.leaflet-pane         { z-index: 400; }
+
+.leaflet-tile-pane    { z-index: 200; }
+.leaflet-overlay-pane { z-index: 400; }
+.leaflet-shadow-pane  { z-index: 500; }
+.leaflet-marker-pane  { z-index: 600; }
+.leaflet-tooltip-pane   { z-index: 650; }
+.leaflet-popup-pane   { z-index: 700; }
+
+.leaflet-map-pane canvas { z-index: 100; }
+.leaflet-map-pane svg    { z-index: 200; }
+
+.leaflet-vml-shape {
+    width: 1px;
+    height: 1px;
+}
+.lvml {
+    behavior: url(#default#VML);
+    display: inline-block;
+    position: absolute;
+}
+
+
+/* control positioning */
+
+.leaflet-control {
+    position: relative;
+    z-index: 800;
+    pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+    pointer-events: auto;
+}
+.leaflet-top,
+.leaflet-bottom {
+    position: absolute;
+    z-index: 1000;
+    pointer-events: none;
+}
+.leaflet-top {
+    top: 0;
+}
+.leaflet-right {
+    right: 0;
+}
+.leaflet-bottom {
+    bottom: 0;
+}
+.leaflet-left {
+    left: 0;
+}
+.leaflet-control {
+    float: left;
+    clear: both;
+}
+.leaflet-right .leaflet-control {
+    float: right;
+}
+.leaflet-top .leaflet-control {
+    margin-top: 10px;
+}
+.leaflet-bottom .leaflet-control {
+    margin-bottom: 10px;
+}
+.leaflet-left .leaflet-control {
+    margin-left: 10px;
+}
+.leaflet-right .leaflet-control {
+    margin-right: 10px;
+}
+
+
+/* zoom and fade animations */
+
+.leaflet-fade-anim .leaflet-tile {
+    will-change: opacity;
+}
+.leaflet-fade-anim .leaflet-popup {
+    opacity: 0;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+}
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
+    opacity: 1;
+}
+.leaflet-zoom-animated {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.leaflet-zoom-anim .leaflet-zoom-animated {
+    will-change: transform;
+}
+.leaflet-zoom-anim .leaflet-zoom-animated {
+    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
+    -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
+    transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
+}
+.leaflet-zoom-anim .leaflet-tile,
+.leaflet-pan-anim .leaflet-tile {
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+
+.leaflet-zoom-anim .leaflet-zoom-hide {
+    visibility: hidden;
+}
+
+
+/* cursors */
+
+.leaflet-interactive {
+    cursor: pointer;
+}
+.leaflet-grab {
+    cursor:         grab;
+}
+.leaflet-crosshair,
+.leaflet-crosshair .leaflet-interactive {
+    cursor: crosshair;
+}
+.leaflet-popup-pane,
+.leaflet-control {
+    cursor: auto;
+}
+.leaflet-dragging .leaflet-grab,
+.leaflet-dragging .leaflet-grab .leaflet-interactive,
+.leaflet-dragging .leaflet-marker-draggable {
+    cursor: move;
+    cursor:         grabbing;
+}
+
+/* marker & overlays interactivity */
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-image-layer,
+.leaflet-pane > svg path,
+.leaflet-tile-container {
+    pointer-events: none;
+}
+
+.leaflet-marker-icon.leaflet-interactive,
+.leaflet-image-layer.leaflet-interactive,
+.leaflet-pane > svg path.leaflet-interactive,
+svg.leaflet-image-layer.leaflet-interactive path {
+    pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+    pointer-events: auto;
+}
+
+/* visual tweaks */
+
+.leaflet-container {
+    background: #ddd;
+    outline: 0;
+}
+.leaflet-container a {
+    color: #0078A8;
+}
+.leaflet-container a.leaflet-active {
+    outline: 2px solid orange;
+}
+.leaflet-zoom-box {
+    border: 2px dotted #38f;
+    background: rgba(255,255,255,0.5);
+}
+
+
+/* general typography */
+.leaflet-container {
+    font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+
+/* general toolbar styles */
+
+.leaflet-bar {
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+    border-radius: 4px;
+}
+.leaflet-bar a,
+.leaflet-bar a:hover {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.leaflet-bar a,
+.leaflet-control-layers-toggle {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    display: block;
+}
+.leaflet-bar a:hover {
+    background-color: #f4f4f4;
+}
+.leaflet-bar a:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.leaflet-bar a:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom: none;
+}
+.leaflet-bar a.leaflet-disabled {
+    cursor: default;
+    background-color: #f4f4f4;
+    color: #bbb;
+}
+
+.leaflet-touch .leaflet-bar a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.leaflet-touch .leaflet-bar a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.leaflet-touch .leaflet-bar a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+/* zoom control */
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    font: bold 18px 'Lucida Console', Monaco, monospace;
+    text-indent: 1px;
+}
+
+.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out  {
+    font-size: 22px;
+}
+
+
+/* layers control */
+
+.leaflet-control-layers {
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    background: #fff;
+    border-radius: 5px;
+}
+.leaflet-control-layers-toggle {
+    width: 36px;
+    height: 36px;
+}
+.leaflet-retina .leaflet-control-layers-toggle {
+    background-size: 26px 26px;
+}
+.leaflet-touch .leaflet-control-layers-toggle {
+    width: 44px;
+    height: 44px;
+}
+.leaflet-control-layers .leaflet-control-layers-list,
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+    display: none;
+}
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+    display: block;
+    position: relative;
+}
+.leaflet-control-layers-expanded {
+    padding: 6px 10px 6px 6px;
+    color: #333;
+    background: #fff;
+}
+.leaflet-control-layers-scrollbar {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 5px;
+}
+.leaflet-control-layers-selector {
+    margin-top: 2px;
+    position: relative;
+    top: 1px;
+}
+.leaflet-control-layers label {
+    display: block;
+}
+.leaflet-control-layers-separator {
+    height: 0;
+    border-top: 1px solid #ddd;
+    margin: 5px -10px 5px -6px;
+}
+
+
+
+/* attribution and scale controls */
+
+.leaflet-container .leaflet-control-attribution {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+.leaflet-control-attribution,
+.leaflet-control-scale-line {
+    padding: 0 5px;
+    color: #333;
+}
+.leaflet-control-attribution a {
+    text-decoration: none;
+}
+.leaflet-control-attribution a:hover {
+    text-decoration: underline;
+}
+.leaflet-container .leaflet-control-attribution,
+.leaflet-container .leaflet-control-scale {
+    font-size: 11px;
+}
+.leaflet-left .leaflet-control-scale {
+    margin-left: 5px;
+}
+.leaflet-bottom .leaflet-control-scale {
+    margin-bottom: 5px;
+}
+.leaflet-control-scale-line {
+    border: 2px solid #777;
+    border-top: none;
+    line-height: 1.1;
+    padding: 2px 5px 1px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+}
+.leaflet-control-scale-line:not(:first-child) {
+    border-top: 2px solid #777;
+    border-bottom: none;
+    margin-top: -2px;
+}
+.leaflet-control-scale-line:not(:first-child):not(:last-child) {
+    border-bottom: 2px solid #777;
+}
+
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+    box-shadow: none;
+}
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+    border: 2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+}
+
+
+/* popup */
+
+.leaflet-popup {
+    position: absolute;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.leaflet-popup-content-wrapper {
+    padding: 1px;
+    text-align: left;
+    border-radius: 12px;
+}
+.leaflet-popup-content {
+    margin: 13px 19px;
+    line-height: 1.4;
+}
+.leaflet-popup-content p {
+    margin: 18px 0;
+}
+.leaflet-popup-tip-container {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    overflow: hidden;
+    pointer-events: none;
+}
+.leaflet-popup-tip {
+    width: 17px;
+    height: 17px;
+    padding: 1px;
+
+    margin: -10px auto 0;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: white;
+    color: #333;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+}
+.leaflet-container a.leaflet-popup-close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 4px 0 0;
+    border: none;
+    text-align: center;
+    width: 18px;
+    height: 14px;
+    font: 16px/14px Tahoma, Verdana, sans-serif;
+    color: #c3c3c3;
+    text-decoration: none;
+    font-weight: bold;
+    background: transparent;
+}
+.leaflet-container a.leaflet-popup-close-button:hover {
+    color: #999;
+}
+.leaflet-popup-scrolled {
+    overflow: auto;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+.leaflet-oldie .leaflet-popup-content-wrapper {
+    -ms-zoom: 1;
+}
+.leaflet-oldie .leaflet-popup-tip {
+    width: 24px;
+    margin: 0 auto;
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
+}
+.leaflet-oldie .leaflet-popup-tip-container {
+    margin-top: -1px;
+}
+
+.leaflet-oldie .leaflet-control-zoom,
+.leaflet-oldie .leaflet-control-layers,
+.leaflet-oldie .leaflet-popup-content-wrapper,
+.leaflet-oldie .leaflet-popup-tip {
+    border: 1px solid #999;
+}
+
+
+/* div icon */
+
+.leaflet-div-icon {
+    background: #fff;
+    border: 1px solid #666;
+}
+
+
+/* Tooltip */
+/* Base styles for the element that has a tooltip */
+.leaflet-tooltip {
+    position: absolute;
+    padding: 6px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #222;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+.leaflet-tooltip.leaflet-clickable {
+    cursor: pointer;
+    pointer-events: auto;
+}
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+    position: absolute;
+    pointer-events: none;
+    border: 6px solid transparent;
+    background: transparent;
+    content: "";
+}
+
+/* Directions */
+
+.leaflet-tooltip-bottom {
+    margin-top: 6px;
+}
+.leaflet-tooltip-top {
+    margin-top: -6px;
+}
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-top:before {
+    left: 50%;
+    margin-left: -6px;
+}
+.leaflet-tooltip-top:before {
+    bottom: 0;
+    margin-bottom: -12px;
+    border-top-color: #fff;
+}
+.leaflet-tooltip-bottom:before {
+    top: 0;
+    margin-top: -12px;
+    margin-left: -6px;
+    border-bottom-color: #fff;
+}
+.leaflet-tooltip-left {
+    margin-left: -6px;
+}
+.leaflet-tooltip-right {
+    margin-left: 6px;
+}
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+    top: 50%;
+    margin-top: -6px;
+}
+.leaflet-tooltip-left:before {
+    right: 0;
+    margin-right: -12px;
+    border-left-color: #fff;
+}
+.leaflet-tooltip-right:before {
+    left: 0;
+    margin-left: -12px;
+    border-right-color: #fff;
+}
+.raksts.center {
+    margin-top: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 1360px) {
+    header {
+        padding: 25px 20px;
+    }
+}
+
+@media only screen and (max-width: 1340px) {
+    .kontakti-flex .map.pattern::after {
+        display: none;
+    }
+    .kontakti-flex .text .info {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
+    .kontakti-flex .text {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
+}
+
+@media only screen and (max-width: 1290px) {
+    .text-form-flex {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        row-gap: 100px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .work .image .img-wrap {
+        width: calc(100% - 40px);
+        height: calc(100% - 30px);
+        top: 10px;
+        left: 20px;
+    }
+    .work {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .work .image {
+        position: relative;
+        top: auto;
+        left: auto;
+        -webkit-transform: none;
+        transform: none;
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+    .work {
+        padding-bottom: 0;
+    }
+    .work .content {
+        margin-bottom: 50px;
+    }
+    h1 {
+        font-size: 40px;
+        line-height: 110%;
+    }
+    h2 {
+        font-size: 30px;
+        line-height: 130%;
+    }
+    h3 {
+        font-size: 25px;
+        line-height: 130%;
+    }
+    h4 {
+        font-size: 20px;
+        line-height: 130%;
+    }
+    footer .footer-flex .contact .number {
+        font-size: 25px;
+    }
+    footer .footer-flex .contact .number span {
+        color: #111;
+    }
+    .work .content .text h2 {
+        font-size: 30px;
+    }
+    .work .content .text h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .mob-dropdowns {
+        display: block;
+    }
+    .lang-mob {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .desk {
+        display: none;
+    }
+    .menu .other-links {
+        margin-left: -15px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    header .header-menu .menu-btn {
+        display: none;
+    }
+    .kontakti-flex {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    header {
+        height: 75px;
+        padding: 20px 20px;
+    }
+    header a img {
+        width: 124px;
+        height: auto;
+    }
+    header .header-menu .hamburger {
+        padding: 11.5px 8px;
+    }
+    .logo-mob {
+        display: block;
+    }
+    .menu .menu-container .close-btn {
+        width: 34px;
+        height: 34px;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .work {
+        flex-wrap: wrap;
+    }
+    .work .image {
+        max-width: none;
+    }
+    .work .content .text {
+        max-width: none;
+    }
+    .banner .banner-content h1 strong {
+        font-size: 30px;
+        line-height: 39px;
+    }
+    .banner .banner-content h2 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .logo-mob {
+        display: block;
+    }
+    .menu .menu-container .close-btn {
+        width: 34px;
+        height: 34px;
+        top: 20px;
+        right: 20px;
+    }
+    .img-wrap.pattern::after {
+        -webkit-transform: translateX(10%) translateY(10%);
+        transform: translateX(10%) translateY(10%);
+    }
+    .text-image-box {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        row-gap: 81px;
+    }
+    .text-form-flex form * :not(div) {
+        width: 100%;
+        max-width: none;
+    }
+    .custom-select {
+        max-width: none;
+    }
+    .banner .banner-content .raksts.bottom {
+        display: none;
+    }
+    .banner .banner-content .raksts img:nth-child(n+3) {
+        display: none;
+    }
+    .raksts.center img:nth-child(n+3) {
+        display: none;
+    }
+    .raksts.page-break {
+        margin-top: 90px;
+    }
+    .raksts.page-break img:nth-child(n+3) {
+        display: none;
+    }
+    .banner .banner-content h1 {
+        margin-bottom: 3px;
+    }
+    .banner .banner-content .banner-text {
+        bottom: 29px;
+        left: 20px;
+    }
+    .banner .banner-content .social-links {
+        display: none;
+    }
+    .banner .banner-content .play-btn span {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 130%;
+        -webkit-transform-origin: 25% 40%;
+        transform-origin: 25% 40%;
+    }
+    .banner .banner-content .play-btn .btn {
+        width: 40px;
+        height: 40px;
+    }
+    .banner .banner-content .play-btn .btn img {
+        width: auto;
+        height: 12px;
+        padding-left: 5px;
+    }
+    .banner .banner-content .play-btn {
+        right: auto;
+        left: 20px;
+        bottom: 160px;
+    }
+    header {
+        height: 75px;
+        padding: 20px 20px;
+    }
+    header a img {
+        width: 124px;
+        height: auto;
+    }
+    header .header-menu .hamburger {
+        padding: 11.5px 8px;
+    }
+    .raksts.right img:nth-child(n+3) {
+        display: none;
+    }
+    .about-us {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 34px;
+    }
+    .about-us .text {
+        max-width: none;
+    }
+    .about-us .img-wrap {
+        max-width: none;
+    }
+    .about-us .img-wrap::after {
+        width: 228px;
+        height: 205px;
+        -webkit-transform: translateY(34px) translateX(67px);
+        transform: translateY(34px) translateX(67px);
+    }
+    .page-content {
+        padding: 75px 20px;
+    }
+    .menu.main .raksts img:nth-child(n+3) {
+        display: none;
+    }
+    .menu.main .raksts {
+        margin-top: 35px;
+        margin-bottom: 33px;
+    }
+    .banner .banner-content .raksts {
+        top: 109px;
+    }
+    .work .image .img-wrap {
+        width: calc(100% - 40px);
+        height: calc(100% - 30px);
+        top: 10px;
+        left: 20px;
+    }
+    .page-content{
+        padding: 75px 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    footer .social-links {
+        display: none;
+    }
+    footer .social-links-mobile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    footer .footer-flex.margin-big {
+        margin-bottom: 76px;
+    }
+    footer .links-footer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        row-gap: 10px;
+        margin-bottom: 79px;
+    }
+    footer .footer-flex.no-margin {
+        display: block;
+    }
+    .pop-up {
+        padding: 0;
+    }
+    .work .content .links {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .work .content .links .work-link {
+        width: 100%;
+        max-width: none;
+        background-color: #95ECFD;
+    }
+    .text-form-flex .mail {
+        font-size: 25px;
+        line-height: 130%;
+    }
+    .text-form-flex .tel {
+        font-size: 25px;
+        line-height: 130%;
+    }
+    footer .footer-flex .contact .email {
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 425px){
+    .kontakti-flex .text .name {
+        max-width:300px;
+        margin-left: -176px;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .img-gallery {
+        justify-content: space-between;
+    }
+    .img-gallery .item {
+        width: calc(50% - 25px);
+        word-break: break-word;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .kontakti-flex .text .info {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        row-gap: 10px;
+
+    }
+}
+
