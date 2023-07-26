@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, inicial-scale=1.0">
+    <title>Montea</title>
+    <link rel="stylesheet" href="style.css">
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function activateDiv() {
+            var div = document.getElementById('myDiv');
+            div.classList.add('active');
+        }
+    </script>
+    <script
+            src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+            crossorigin="anonymous"></script>
+    <script>
+        function SubForm (event){
+            event.preventDefault();
+            $.ajax({
+                url:'https://api.apispreadsheets.com/data/2IaAUr5qQ3jGtkIo/',
+                type:'post',
+                data:$("#myForm").serializeArray(),
+                success: function(){
+                    showSuccessAlert();
+                    clearForm();
+                },
+                error: function(){
+                    showErrorAlert();
+                }
+            });
+        }
+        function showSuccessAlert() {
+            $(".success-message").removeClass("d-none");
+            $(".alert-danger").addClass("d-none");
+            setTimeout(function () {
+                $(".success-message").addClass("d-none");
+            }, 3000);
+        }
+
+        function showErrorAlert() {
+            $(".alert-danger").removeClass("d-none");
+            $(".success-message").addClass("d-none");
+        }
+
+        function clearForm() {
+            $("#myForm")[0].reset();
+        }
+    </script>
+</head>
+<body>
+<div id="myDiv" class="menu nozares">
+    <div class="menu-container">
+        <div class="close-btn">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/cross.svg" alt="">
+        </div>
+        <div class="menu-wrap">
+            <h2>Iespēju <strong>veidi</strong></h2>
+            <div class="menu-list">
+                <div class="col"><a href="./life-health_insurence.html">Dzīvības apdrošināšana</a><a href="./savings.html">Uzkrājumu veidošana</a></div><div class="col"><a href="./accident.html">Nelaimes gadījumu apdrošināšana </a><a href="./critical-health-problems.html">Kritisko saslimšanu apdrošināšana</a></div><div class="col"><a href="./disability.html">Invaliditātes apdrošināšana</a></div>            </div>
+        </div>
+        <div class="raksts">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+        </div>
+    </div>
+</div>
+<div  class="menu main">
+    <div class="menu-container">
+        <div class="close-btn">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/cross.svg" alt="">
+        </div>
+        <a href="./index.html" class="logo-mob">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/logo.svg" alt="">
+        </a><br><br>
+        <div class="mob-dropdowns">
+            <div class="dropdown">
+                <div class="dropdown-head" id="prod">
+                    Iespējas                    <img src="https://montea.lv/wp-content/themes/montea/assets/svg/dropdown-arrow.svg" alt="">
+                </div>
+                <div class="dropdown-content" style="display: none;">
+                    <a href="./life-health_insurence.html">Dzīvības apdrošināšana</a><a href="./savings.html">Uzkrājumu veidošana</a><a href="./accident.html">Nelaimes gadījumu apdrošināšana </a><a href="./critical-health-problems.html">Kritisko saslimšanu apdrošināšana</a><a href="./disability.html">Invaliditātes apdrošināšana</a></div>            </div>
+            </div>
+        <div class="menu-wrap desk">
+            <h2>Iespēju <strong>veidi</strong></h2>
+            <div class="menu-list">
+                <div class="col"><a href="./life-health_insurence.html">Dzīvības apdrošināšana</a><a href="https://montea.lv/produkti/buvniecibas-garantiju-apdrosinasana/">Būvniecības garantiju apdrošināšana (galvojumu apdrošināšana)</a><a href="https://montea.lv/produkti/buvniecibas-visu-risku-apdrosinasana/">Būvniecības visu risku apdrošināšana</a><a href="https://montea.lv/produkti/celojumu-un-komandejumu-apdrosinasana/">Ceļojumu un komandējumu apdrošināšana</a><a href="https://montea.lv/produkti/ekspeditoru-un-parvadataju-atbildibas-apdrosinasana/">Ekspeditoru un pārvadātāju atbildības apdrošināšana</a><a href="https://montea.lv/produkti/galvojumu-apdrosinasana/">Galvojumu apdrošināšana</a><a href="https://montea.lv/produkti/iekartu-salusanas-apdrosinasana/">Iekārtu salūšanas apdrošināšana</a></div><div class="col"><a href="https://montea.lv/produkti/kiberrisku-apdrosinasana-2/">Kiberrisku apdrošināšana</a><a href="https://montea.lv/produkti/kravu-apdrosinasana/">Kravu apdrošināšana</a><a href="https://montea.lv/produkti/kritisko-saslimsanu-apdrosinasana/">Kritisko saslimšanu apdrošināšana</a><a href="https://montea.lv/produkti/nelaimes-gadijumu-apdrosinasana/">Nelaimes gadījumu apdrošināšana</a><a href="https://montea.lv/produkti/octa-un-kasko/">OCTA un KASKO</a><a href="https://montea.lv/produkti/pasakumu-atcelsanas-apdrosinasana/">Pasākumu atcelšanas apdrošināšana</a><a href="https://montea.lv/produkti/profesionalas-civiltiesiskas-atbildibas-apdrosinasana/">Profesionālās civiltiesiskās atbildības apdrošināšana</a></div><div class="col"><a href="https://montea.lv/produkti/profesionalo-sportistu-un-to-ligumu-apdrosinasana/">Profesionālo sportistu un to līgumu apdrošināšana</a><a href="https://montea.lv/produkti/saimnieciskas-darbibas-partraukuma-apdrosinasana/">Saimnieciskās darbības pārtraukuma apdrošināšana</a><a href="https://montea.lv/produkti/specialas-tehnikas-apdrosinasana/">Speciālās tehnikas apdrošināšana</a><a href="https://montea.lv/produkti/uznemuma-vadoso-amatpersonu-atbildibas-apdrosinasana/">Uzņēmuma vadošo amatpersonu atbildības apdrošināšana</a><a href="https://montea.lv/produkti/veselibas-apdrosinasana/">Veselības apdrošināšana</a><a href="https://montea.lv/produkti/visparejas-civiltiesiskas-atbildibas-apdrosinasana/">Vispārējās civiltiesiskās atbildības apdrošināšana</a></div>
+            </div>
+        </div>
+
+        <div class="raksts">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="">
+        </div>
+        <div class="menu-wrap">
+            <div class="other-links">
+                <div id="menu-item-216" class="menu-item menu-item-type-post_type menu-item-object-page list menu-item-216"><a href="./kontaki.html" class="header-link">Kontakti</a></div><div id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page list menu-item-217"><a href="https://montea.lv/privatuma-politika/" class="header-link">Privātuma politika</a></div><div id="menu-item-218" class="menu-item menu-item-type-post_type menu-item-object-page list menu-item-218"><a href="https://montea.lv/sikdatnu-politika/" class="header-link">Sīkdatņu politika</a></div><div id="menu-item-219" class="menu-item menu-item-type-post_type menu-item-object-page list menu-item-219"><a href="https://montea.lv/sudzibu-izskatisanas-kartiba/" class="header-link">Sūdzību izskatīšanas kārtība</a></div>            </div>
+        </div>
+    </div>
+</div>
+<header class="index">
+    <div class="header-content">
+        <a href="./index.html">
+            <img src="img_icons_logo/Black%20logo%20-%20no%20background.png" alt="logo" class="logo">
+        </a>
+    </div>
+    <div class="header-menu">
+        <div id="menu-item-132" class="products menu-item menu-item-type-custom menu-item-object-custom menu-btn menu-item-132" class="menu-btn">
+            <a href="#" onclick="activateDiv()" class> Iespējas </a>
+        </div>
+        <a href="./kontaki.html" class> Kontakti </a>
+        <a href="./form.html" class> Piesakies </a>
+    </div>
+    <div class="hamburger">
+        <img src="https://montea.lv/wp-content/themes/montea/assets/svg/hamburger.svg" class="no-lazy-load" alt="Izvēlnes ikona">
+    </div>
+</header>
+<main>
+    <section class="banner" style="--vh: 9.33px;">
+        <video id="videoID" autoplay="" muted="" loop="">
+            <source src="water_bg.mp4">
+        </video>
+        <div class="gradient"></div>
+        <div class="banner-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/monteainsurance/?viewAsMember=true" target="_blank">
+                    <img src="https://montea.lv/wp-content/themes/montea/assets/svg/linked.svg" class="no-lazy-load" alt="LinkedIn">
+                </a>
+                <a href="mailto:info@montea.lv">
+                    <img src="https://montea.lv/wp-content/themes/montea/assets/svg/mail.svg" class="no-lazy-load" alt="E-pasts">
+                </a>
+                <a href="https://wa.me/27051000" target="_blank">
+                    <img src="https://montea.lv/wp-content/themes/montea/assets/svg/wa.svg" class="no-lazy-load" alt="WhatsApp">
+                </a>
+                <a href="https://www.facebook.com/Monteainsurance" target="_blank">
+                    <img src="https://montea.lv/wp-content/themes/montea/assets/svg/fb.svg" class="no-lazy-load" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/monteainsurance/" target="_blank">
+                    <img src="img_icons_logo/instagram.svg"  class="no-lazy-load" alt="Instagram">
+                </a>
+
+            </div>
+            <div class="raksts bottom">
+                <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="Raksts">
+                <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="Raksts">
+            </div>
+<!--            <div class="raksts top">-->
+<!--                <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="Raksts">-->
+<!--                <img src="https://montea.lv/wp-content/themes/montea/assets/svg/raksts.svg" alt="Raksts">-->
+<!--            </div>-->
+<!--            <div class="icon_banner_one">-->
+<!--                <img src="down.svg" alt="Down">-->
+<!--            </div>-->
+<!--            <div class="icon_banner_two">-->
+<!--                <img src="down.svg" alt="Down">-->
+<!--            </div>-->
+<!--            <div class="banner-img">-->
+<!--                <img src="img_icons_logo/img_icons_logo/montea-buklet.png" class="banner-img" alt="fam">-->
+<!--            </div>-->
+<!--            <div class="banner-family">-->
+<!--                <img src="stock.jpg" alt="deal img">-->
+<!--            </div>-->
+<!--            <div class="main-container-icons">-->
+<!--                <img src="main.png" alt="main container">-->
+<!--            </div>-->
+<!--            <div class="floating">-->
+<!--                <img style=" margin-left: 620px;margin-top: -500px;height: 75px; width: auto;" src="health-insurance.png" alt="dzīvibas insurance">-->
+<!--                <img style=" margin-left: 600px;margin-top: 2px;height: 75px; width: auto;" src="saving-insurance.png" alt="uzkrājumu insurance">-->
+<!--                <img style=" margin-left: 730px;margin-top: -130px;height: 75px; width: auto;" src="accident-insurance.png" alt="negadījumu insurance">-->
+<!--                <img style=" margin-left: 670px;margin-top: -10px;height: 75px; width: auto;" src="critical-insurance.png" alt="kritiskas saslimšanas insurance">-->
+<!--                <img style=" margin-left: 700px;margin-top: 10px;height: 75px; width: auto;" src="disability-insurance.png" alt="invaliditātes insurance">-->
+<!--            </div>-->
+
+            <div class="banner-btn" >
+                <a href="./form.html" class="btn_bubble" ><button style="
+	border-radius: 20px;
+	background-color: transparent;
+	box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.8);
+	width: 368px;
+	height: 76px;
+	color: white;
+	font-size: 30px;
+	border: none;
+" type="submit" class="form-btn">
+                    Pieteikties konsultācijai!
+                </button></a>
+            </div>
+            <div class="banner-text">
+                <h1>Parūpējies
+                    par finanšu
+                    drošību</h1><br><br><h1><strong>LAIMĒ</strong></h1>
+                <h1 style="max-width: 641px">ĢIMENES FOTOSESIJU</h1>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="raksts page-break">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+        </div>
+    </section>
+    <section class="page-content">
+        <div class="circles">
+            <div class="item">
+                <img src="img_icons_logo/icons8-income-50.png" alt="Jauns zīmols, bagātīga pieredze">
+                <div class="title">Sāc uzskrāt jau tagad!</div>
+                <div class="text">Lieliska iespēja uzkrāt savai un bērna nākotnei jau tagad, izmanotjot uzrājošo dzīvibas aprdoršināšanu!</div>
+            </div>
+            <div class="item">
+                <img src="img_icons_logo/icons8-win-30.png" alt="Konkurences veicināšana">
+                <div class="title">Finanšu drošība</div>
+                <div class="text">Laimē ģimenes fotosesiju! Piesakies konsultacijai un piedalies izloze !</div><br />
+            </div>
+            <div class="item">
+                <img src="https://montea.lv/wp-content/uploads/2022/08/circle-icon3.svg" alt="Fokuss uz visaptverošu uzņēmuma apdrošināšanas aizsardzību">
+                <div class="title">Ieguvumi</div>
+                <div class="text">Daudz un dažādi ieguvumi gan vecākiem, gan bērnam, kas sevī ietver uzkrātus līdzekļus, finansiāla drošība vecāku nāves gadījumā, Mantojums bez apgrūtinājumiem, IIN atmaksa 20% no veiktajām iemaksām un citi.
+            </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="raksts page-break right">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="img_icons_logo/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+        </div>
+    </section>
+    <section  id="specific-container" class="page-content">
+
+        <div class="wrapper wrapper--w680">
+            <div class="card card-2">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 style="font-size: 30px" class="title">Piesakies konsultācijai un piedalies izlozē!</h2>
+                    <form id="myForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Vārds" name="name" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="surname" placeholder="Uzvārds" name="surname"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Telefona numurs" name="phone" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="E-pasts" name="email"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="source-radio">Kur uzzināji par šo piedāvājumu?</label><br>
+                            <input type="radio" id="source-radio-ad" name="source" value="Reklāma" required>
+                            <label for="source-radio-ad">Slimnīca</label><br>
+                            <input type="radio" id="source-radio-social" name="source" value="Sociālie tīkli">
+                            <label for="source-radio-social">Sociālie tīkli</label><br>
+                            <input type="radio" id="source-radio-website" name="source" value="Montea mājaslapa">
+                            <label for="source-radio-website">Montea mājaslapa</label><br>
+                            <input type="radio" id="source-radio-friend" name="source" value="Draugs ieteica">
+                            <label for="source-radio-friend">Draugs ieteica</label><br>
+                            <input type="radio" id="source-radio-other" name="source" value="Cits">
+                            <label for="source-radio-other">Cits</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="otherText" name="otherText" placeholder="Cits:" class="form-control other-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="yes-no-radio">Vai vēlies piedalīties izlozē?</label><br>
+                            <input type="radio" id="yes-no-radio-yes" name="PiedalisiesIzloze" value="Yes" required>
+                            <label for="yes-no-radio-yes">Jā</label><br>
+                            <input type="radio" id="yes-no-radio-no" name="PiedalisiesIzloze" value="No">
+                            <label for="yes-no-radio-no">Nē</label>
+                        </div>
+                        <center>
+                            <button onclick="SubForm(event)" type="submit" class="btn btn-primary submit-button">Sūtīt pieteikumu</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="raksts page-break">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+            <img src="https://montea.lv/wp-content/themes/montea/assets/svg/rakstsB.svg" class="no-lazy-load" alt="Raksts">
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer-wrap">
+        <div class="footer-flex">
+            <div class="logo-container">
+                <a href="https://montea.lv/" style="display:flex">
+                    <img src="img_icons_logo/Black%20logo%20-%20no%20background.png" class="no-lazy-load" alt="logo">
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/monteainsurance/?viewAsMember=true" target="_blank">
+                    <img src="https://montea.lv/wp-content/themes/montea/assets/svg/linked.svg" class="no-lazy-load" alt="LinkedIn">
+                </a>
+                <a href="mailto:info@montea.lv">
+                    <img src="https://montea.lv/wp-content/themes/montea/assets/svg/mail.svg" class="no-lazy-load" alt="E-pasts">
+                </a>
+                <a href="https://wa.me/27051000" target="_blank">
+                    <img src="https://montea.lv/wp-content/themes/montea/assets/svg/wa.svg" class="no-lazy-load" alt="WhatsApp">
+                </a>
+                <a href="https://www.facebook.com/Monteainsurance" target="_blank">
+                    <img src="https://montea.lv/wp-content/themes/montea/assets/svg/fb.svg" class="no-lazy-load" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/monteainsurance/" target="_blank">
+                    <img src="img_icons_logo/instagram.svg"  class="no-lazy-load" alt="Instagram" width="54" height="54">
+                </a>
+            </div>
+        </div>
+        <div class="footer-flex margin-big">
+            <div class="adress">
+                <h2>Kalnciema Iela 104</h2>
+                <p class="t1">Zemgales priekšpilsēta, Rīga, LV-1046</p>
+            </div>
+            <div class="contact">
+                <a href="tel:+37127 051 000" class="number">
+                    <span>+371</span> 28 808 292 </a>
+                <a href="mailto:life@montea.lv" class="email">life@montea.lv</a>
+                <div class="bubble-fluid">
+                    <img src="img_icons_logo/montea-buklet.png" alt="icon for contacts">
+                </div>
+            </div>
+        </div>
+        <div class="social-links-mobile">
+            <a href="https://www.linkedin.com/company/monteainsurance/?viewAsMember=true" target="_blank">
+                <img src="https://montea.lv/wp-content/themes/montea/assets/svg/linked.svg" class="no-lazy-load" alt="LinkedIn">
+            </a>
+            <a href="mailto:info@montea.lv">
+                <img src="https://montea.lv/wp-content/themes/montea/assets/svg/mail.svg" class="no-lazy-load" alt="E-pasts">
+            </a>
+            <a href="https://wa.me/27051000" target="_blank">
+                <img src="https://montea.lv/wp-content/themes/montea/assets/svg/wa.svg" class="no-lazy-load" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com/Monteainsurance" target="_blank">
+                <img src="https://montea.lv/wp-content/themes/montea/assets/svg/fb.svg" class="no-lazy-load" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/monteainsurance/" target="_blank">
+                <img src="img_icons_logo/instagram.svg"  class="no-lazy-load" alt="Instagram" width="54" height="54">
+            </a>
+        </div>
+        <div class="footer-flex no-margin">
+            <div class="links-footer">
+                <div id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page list menu-item-138">
+                    <a href="https://montea.lv/privatuma-politika/" class="header-link">Privātuma politika</a>
+                </div>
+                <div id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page list menu-item-139">
+                    <a href="https://montea.lv/sikdatnu-politika/" class="header-link">Sīkdatņu politika</a>
+                </div>
+                <div id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page list menu-item-140">
+                    <a href="https://montea.lv/sudzibu-izskatisanas-kartiba/" class="header-link">Sūdzību izskatīšanas kārtība</a>
+                </div>
+            </div>
+            <div class="copyright"> Visas tiesības aizsargātas © 2022 </div>
+        </div>
+    </div>
+</footer>
+<script>
+    $( document ).ready(function() {
+        $('.menu .close-btn').click(function() {
+            $(this).parent().parent().removeClass('active');
+        })
+        $('.pop-up .close-btn').click(function() {
+            $(this).parent().parent().removeClass('active');
+        })
+        $('.hamburger').click(function() {
+            $('.menu.main').addClass('active')
+        })
+        $('.menu-btn.products').click(function() {
+            $('.menu.products').addClass('active')
+        })
+        $('.menu-btn.nozares').click(function() {
+            $('.menu.nozares').addClass('active')
+        })
+        $('.dropdown-head').click(function() {
+            $(this).parent().toggleClass('active')
+            $(this).siblings().slideToggle()
+        })
+
+        $('.links .work-link').click(function() {
+            const id = $(this).attr('id')
+            $('.pop-up#' + id).addClass('active')
+        })
+
+    })
+</script>
+<script>
+    var video = document.getElementById("videoID");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("muted", "");
+    video.play();
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
