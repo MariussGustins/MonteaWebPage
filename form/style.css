@@ -1533,6 +1533,14 @@ header .header-menu .menu-btn {
 .menu .menu-list a:hover {
     border-color: #111;
 }
+@media only screen and (max-width: 1536px){
+    footer .social-links{
+        right: 83px;
+    }
+    .bubble-fluid{
+        left:825px!important;
+    }
+}
 
 @media only screen and (max-width: 1360px) {
     header {
