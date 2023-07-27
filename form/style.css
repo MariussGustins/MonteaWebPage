@@ -2155,4 +2155,7 @@ header .header-menu .hamburger:hover {
     .hamburger{
         display: none;
     }
+    .bubble-fluid {
+        left:1103px;
+    }
 }
