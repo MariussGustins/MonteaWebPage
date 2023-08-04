@@ -666,8 +666,8 @@ footer .social-links {
 
 .bubble-fluid {
     position: absolute;
-    top: 44px;
-    left: 1095px;
+    top: 10%;
+    left: 50%;
     opacity: 1; /* Adj    ust the opacity as desired */
 }
 .bubble-fluid img{
@@ -1007,7 +1007,7 @@ header .header-menu .hamburger {
     }
     .banner .banner-content h1 {
         font-size: 40px;
-        max-width: 320px;
+        max-width: 400px;
         margin-bottom: 12px;
     }
     .banner .banner-content h2 {
@@ -1544,8 +1544,7 @@ header .header-menu .menu-btn {
         padding: 25px 20px;
     }
     .bubble-fluid{
-        left:799px!important;
-        top:104px;
+        left: 30%!important;
     }
     .bubble-fluid img{
         width:402px;
@@ -1553,12 +1552,21 @@ header .header-menu .menu-btn {
     }
 
 }
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:769px) {
     footer .footer-flex .contact .number{
         display: none;
     }
     footer .footer-flex .contact .email{
         display: none;
+    }
+
+}
+@media only screen and (max-width:768px) {
+    .footer-flex{
+        flex-direction: column;
+    }
+    .bubble-fluid{
+        display:none;
     }
 }
 
@@ -1642,7 +1650,8 @@ header .header-menu .menu-btn {
         font-size: 40px;
     }
     .bubble-fluid{
-        left:700px!important;
+        left:454px!important;
+        top: 100px !important;
     }
 }
 
@@ -1695,12 +1704,12 @@ header .header-menu .menu-btn {
         right: 20px;
     }
 }
-@media only screen and (max-width: 1536px){
+@media only screen and (min-width: 1100px)and (max-width: 1800px){
     footer .social-links{
         right: 83px;
     }
     .bubble-fluid{
-        left:825px!important;
+        left:59%!important;
     }
     .banner .banner-content .social-links{
         right: 61px;
@@ -2182,6 +2191,11 @@ header .header-menu .hamburger:hover {
         width: calc(50% - 10px);
     }
 }
+@media only screen and (min-width: 1400px) and (max-width:1700px) {
+    .bubble-fluid {
+        left:52% !important;
+    }
+}
 @media only screen and (max-width: 1920px) {
     .banner .banner-content h2 {
         font-size: 40px;
@@ -2193,6 +2207,6 @@ header .header-menu .hamburger:hover {
         display: none;
     }
     .bubble-fluid {
-        left:1103px;
+        left:62%;
     }
 }
