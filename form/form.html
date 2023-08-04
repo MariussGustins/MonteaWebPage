@@ -317,18 +317,21 @@
       </div>
       <div class="form-group">
         <label for="source-radio">Kur uzzināji par šo piedāvājumu?</label><br>
-        <input type="radio" id="source-radio-ad" name="source" value="Reklāma" required>
-        <label for="source-radio-ad">Slimnīca</label><br>
+        <input type="radio" id="source-radio-ad" name="source" value="Medicīna" required>
+        <label for="source-radio-ad">Medicīnas iestāde</label><br>
+        <div class="form-group" id="otherInputContainer1" style="display: none;">
+          <input type="text" id="Iestade" name="Iestade" placeholder="Iestādes nosaukums:" class="form-control other-input">
+        </div>
         <input type="radio" id="source-radio-social" name="source" value="Sociālie tīkli">
         <label for="source-radio-social">Sociālie tīkli</label><br>
         <input type="radio" id="source-radio-website" name="source" value="Montea mājaslapa">
         <label for="source-radio-website">Montea mājaslapa</label><br>
         <input type="radio" id="source-radio-friend" name="source" value="Draugs ieteica">
-        <label for="source-radio-friend">Draugs ieteica</label><br>
+        <label for="source-radio-friend">Ieteica draugs</label><br>
         <input type="radio" id="source-radio-other" name="source" value="Cits">
         <label for="source-radio-other">Cits</label>
       </div>
-      <div class="form-group">
+      <div class="form-group" id="otherInputContainer" style="display: none;">
         <input type="text" id="otherText" name="otherText" placeholder="Cits:" class="form-control other-input">
       </div>
       <div class="form-group">
@@ -354,5 +357,26 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   </div>
 </section>
+<script>
+  const sourceRadioOther = document.getElementById('source-radio-other');
+  const sourceRadioAd= document.getElementById('source-radio-ad');
+  const otherInputContainer = document.getElementById('otherInputContainer');
+  const otherRadioButtons = document.querySelectorAll('input[name="source"]:not(#source-radio-other):not(#source-radio-ad)');
+  const otherInputContainer1 = document.getElementById('otherInputContainer1');
+
+  sourceRadioOther.addEventListener('click', function () {
+    otherInputContainer.style.display = sourceRadioOther.checked ? 'block' : 'none';
+  });
+  sourceRadioAd.addEventListener('click', function () {
+    otherInputContainer1.style.display = sourceRadioAd.checked ? 'block' : 'none';
+  });
+
+  otherRadioButtons.forEach(function (radioButton) {
+    radioButton.addEventListener('click', function () {
+      otherInputContainer.style.display = 'none';
+      otherInputContainer1.style.display = 'none';
+    });
+  });
+</script>
 </body>
 </html>
