@@ -276,7 +276,7 @@
                             <label for="source-radio">Kur uzzināji par šo piedāvājumu?</label><br>
                             <input type="radio" id="source-radio-ad" name="source" value="Medicīna" required>
                             <label for="source-radio-ad">Medicīnas iestāde</label><br>
-                            <div class="form-group" id="otherInputContainer1" style="display: block;">
+                            <div class="form-group" id="otherInputContainer1" style="display: none;">
                                 <input type="text" id="otherText1" name="otherText1" placeholder="Iestādes nosaukums:" class="form-control other-input">
                             </div>
                             <input type="radio" id="source-radio-social" name="source" value="Sociālie tīkli">
@@ -420,17 +420,22 @@
 
     })
     const sourceRadioOther = document.getElementById('source-radio-other');
+    const sourceRadioAd= document.getElementById('source-radio-ad');
     const otherInputContainer = document.getElementById('otherInputContainer');
-    const otherRadioButtons = document.querySelectorAll('input[name="source"]:not(#source-radio-other)');
+    const otherRadioButtons = document.querySelectorAll('input[name="source"]:not(#source-radio-other):not(#source-radio-ad)');
     const otherInputContainer1 = document.getElementById('otherInputContainer1');
 
     sourceRadioOther.addEventListener('click', function () {
         otherInputContainer.style.display = sourceRadioOther.checked ? 'block' : 'none';
     });
+    sourceRadioAd.addEventListener('click', function () {
+        otherInputContainer1.style.display = sourceRadioAd.checked ? 'block' : 'none';
+    });
 
     otherRadioButtons.forEach(function (radioButton) {
         radioButton.addEventListener('click', function () {
             otherInputContainer.style.display = 'none';
+            otherInputContainer1.style.display = 'none';
         });
     });
 </script>
