@@ -147,6 +147,9 @@ img {
     border: 1px solid transparent;
     border-radius: 0.25rem;
 }
+.d-none {
+    display: none!important;
+}
 
 
 .form-control {
