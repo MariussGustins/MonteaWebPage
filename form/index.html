@@ -50,6 +50,16 @@
         function clearForm() {
             $("#myForm")[0].reset();
         }
+        const sourceRadioOther = document.getElementById('source-radio-other');
+        const otherInputContainer = document.getElementById('otherInputContainer');
+
+        sourceRadioOther.addEventListener('click', function () {
+            if (sourceRadioOther.checked) {
+                otherInputContainer.style.display = 'block';
+            } else {
+                otherInputContainer.style.display = 'none';
+            }
+        });
     </script>
 </head>
 <body>
@@ -202,7 +212,7 @@
             <div class="banner-text">
                 <h1>Parūpējies
                     par finanšu
-                    drošību</h1><br><br><h1><strong>LAIMĒ</strong></h1>
+                    drošību</h1><br><h1><strong>LAIMĒ</strong></h1>
                 <h1 style="max-width: 641px">ĢIMENES FOTOSESIJU</h1>
             </div>
         </div>
@@ -223,17 +233,19 @@
             <div class="item">
                 <img src="img_icons_logo/icons8-income-50.png" alt="Jauns zīmols, bagātīga pieredze">
                 <div class="title">Sāc uzskrāt jau tagad!</div>
-                <div class="text">Lieliska iespēja uzkrāt savai un bērna nākotnei jau tagad, izmanotjot uzrājošo dzīvibas aprdoršināšanu!</div>
+                <div class="text">Dzīvības apdrošināšana ar uzkrājumu ir lieliska iespēja veidot drošu uzkrājumu savai un bērnu nākotnei!</div>
             </div>
             <div class="item">
                 <img src="img_icons_logo/icons8-win-30.png" alt="Konkurences veicināšana">
                 <div class="title">Finanšu drošība</div>
-                <div class="text">Laimē ģimenes fotosesiju! Piesakies konsultacijai un piedalies izloze !</div><br />
+                <div class="text"><strong style="font-size: 20px">Iespēja laimēt ģimenes fotosesiju pie profesionāla fotogrāfa!</strong><br>Piesakies konsultācijai par savu finanšu drošību un piedalies izlozē.</div><br />
             </div>
             <div class="item">
                 <img src="https://montea.lv/wp-content/uploads/2022/08/circle-icon3.svg" alt="Fokuss uz visaptverošu uzņēmuma apdrošināšanas aizsardzību">
                 <div class="title">Ieguvumi</div>
-                <div class="text">Daudz un dažādi ieguvumi gan vecākiem, gan bērnam, kas sevī ietver uzkrātus līdzekļus, finansiāla drošība vecāku nāves gadījumā, Mantojums bez apgrūtinājumiem, IIN atmaksa 20% no veiktajām iemaksām un citi.
+                <div class="text">• IIN atmaksa 20% apmērā no veiktajām iemaksām<br>
+                    • Finansiāla aizsardzība iestājoties apdrošināšanas gadījumam<br>
+                    • Sirdsmiers un nodrošinājums nākotnei
             </div>
             </div>
         </div>
@@ -278,11 +290,11 @@
                             <input type="radio" id="source-radio-website" name="source" value="Montea mājaslapa">
                             <label for="source-radio-website">Montea mājaslapa</label><br>
                             <input type="radio" id="source-radio-friend" name="source" value="Draugs ieteica">
-                            <label for="source-radio-friend">Draugs ieteica</label><br>
+                            <label for="source-radio-friend">Ieteica draugs</label><br>
                             <input type="radio" id="source-radio-other" name="source" value="Cits">
                             <label for="source-radio-other">Cits</label>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="otherInputContainer" style="display: none;">
                             <input type="text" id="otherText" name="otherText" placeholder="Cits:" class="form-control other-input">
                         </div>
                         <div class="form-group">
