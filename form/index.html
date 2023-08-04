@@ -50,16 +50,7 @@
         function clearForm() {
             $("#myForm")[0].reset();
         }
-        const sourceRadioOther = document.getElementById('source-radio-other');
-        const otherInputContainer = document.getElementById('otherInputContainer');
 
-        sourceRadioOther.addEventListener('click', function () {
-            if (sourceRadioOther.checked) {
-                otherInputContainer.style.display = 'block';
-            } else {
-                otherInputContainer.style.display = 'none';
-            }
-        });
     </script>
 </head>
 <body>
@@ -283,8 +274,11 @@
                         </div>
                         <div class="form-group">
                             <label for="source-radio">Kur uzzināji par šo piedāvājumu?</label><br>
-                            <input type="radio" id="source-radio-ad" name="source" value="Reklāma" required>
-                            <label for="source-radio-ad">Slimnīca</label><br>
+                            <input type="radio" id="source-radio-ad" name="source" value="Medicīna" required>
+                            <label for="source-radio-ad">Medicīnas iestāde</label><br>
+                            <div class="form-group" id="otherInputContainer1" style="display: block;">
+                                <input type="text" id="otherText1" name="otherText1" placeholder="Iestādes nosaukums:" class="form-control other-input">
+                            </div>
                             <input type="radio" id="source-radio-social" name="source" value="Sociālie tīkli">
                             <label for="source-radio-social">Sociālie tīkli</label><br>
                             <input type="radio" id="source-radio-website" name="source" value="Montea mājaslapa">
@@ -425,6 +419,20 @@
         })
 
     })
+    const sourceRadioOther = document.getElementById('source-radio-other');
+    const otherInputContainer = document.getElementById('otherInputContainer');
+    const otherRadioButtons = document.querySelectorAll('input[name="source"]:not(#source-radio-other)');
+    const otherInputContainer1 = document.getElementById('otherInputContainer1');
+
+    sourceRadioOther.addEventListener('click', function () {
+        otherInputContainer.style.display = sourceRadioOther.checked ? 'block' : 'none';
+    });
+
+    otherRadioButtons.forEach(function (radioButton) {
+        radioButton.addEventListener('click', function () {
+            otherInputContainer.style.display = 'none';
+        });
+    });
 </script>
 <script>
     var video = document.getElementById("videoID");
