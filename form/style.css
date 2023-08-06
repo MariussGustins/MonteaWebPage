@@ -13,17 +13,15 @@ html {
 }
 body {
     display: flex;
-    font-family: 'Merriweather', serif;
+    font-family: Merriweather, serif;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
 }
 body {
-    min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    font-family: 'Merriweather', serif;
     margin: 0 auto;
 }
 body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
@@ -149,6 +147,27 @@ img {
 }
 .d-none {
     display: none!important;
+}
+/* Style for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Style for the modal content */
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
 
 
@@ -339,7 +358,7 @@ h1 {
 h2 {
     font-weight: 300;
     font-size: 60px;
-    font-family: 'Merriweather', serif;
+    font-family: Merriweather, serif;
     line-height: 130%;
     -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
     font-feature-settings: 'pnum' on, 'lnum' on;
@@ -1260,7 +1279,9 @@ input:checked + .slider:before {
     position: relative;
     max-width: 1920px;
     padding-top: 100px; /* Adjust the padding-top value as needed */
-    background: url('img_background/wave.svg') no-repeat center top; /* Replace 'wave.svg' with the correct path to your SVG file */
+    /*background: url('img_background/wave.svg') no-repeat center top; !* Replace 'wave.svg' with the correct path to your SVG file *!*/
+    background: url('img_background/blob-scene-haikei(black).svg');
+    background-size: cover;/* Replace 'wave.svg' with the correct path to your SVG file */
 }
 
 .banner-btn_s{
@@ -1399,7 +1420,7 @@ margin-left: 392px;
 
     --color1: #36486b;
     --color2: #bccad6;
-    font-family: cambria;
+    font-family: Merriweather;
     text-align: center;
     font-size: 46px;
     background: repeating-linear-gradient(
@@ -1905,7 +1926,7 @@ header .header-menu .menu-btn {
         width: 80%;
     }
     .quote {
-        font-family: 'Arial', sans-serif;
+        font-family: Merriweather, sans-serif;
         padding: 20px;
         background-color: #f0f0f0;
         border-radius: 5px;
@@ -2155,6 +2176,7 @@ header .header-menu .hamburger:hover {
     footer .footer-flex.no-margin {
         display: block;
     }
+
     .pop-up {
         padding: 0;
     }
@@ -2231,4 +2253,16 @@ header .header-menu .hamburger:hover {
     .bubble-fluid {
         left:62%;
     }
+}
+
+/*-------------custom scrollbar-------------------*/
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background: #95ECFD;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#000000, #C7F5FE);
+    border-radius: 10px;
 }
