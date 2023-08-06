@@ -52,6 +52,72 @@
         }
 
     </script>
+    <style>
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+        .popup {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 80%;
+            max-height: 80%;
+            overflow: auto;
+        }
+        .terms {
+            margin-top: 10px;
+        }
+        .h3, h3 {
+            font-size: 1.75rem;
+        }
+        .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+            cursor: pointer;
+        }
+        [type=button], [type=reset], [type=submit], button {
+            -webkit-appearance: button;
+        }
+        button, select {
+            text-transform: none;
+        }
+        button, input {
+            overflow: visible;
+        }
+        button, input, optgroup, select, textarea {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+        button {
+            border-radius: 0;
+        }
+    </style>
 </head>
 <body>
 <div id="myDiv" class="menu nozares">
@@ -274,10 +340,10 @@
                         </div>
                         <div class="form-group">
                             <label for="source-radio">Kur uzzināji par šo piedāvājumu?</label><br>
-                            <input type="radio" id="source-radio-ad" name="source" value="Medicīna" required>
+                            <input type="radio" id="source-radio-ad" name="source" value="Medicīna">
                             <label for="source-radio-ad">Medicīnas iestāde</label><br>
                             <div class="form-group" id="otherInputContainer1" style="display: none;">
-                                <input type="text" id="otherText1" name="otherText1" placeholder="Iestādes nosaukums:" class="form-control other-input">
+                                <input type="text" id="Iestade" name="Iestade" placeholder="Iestādes nosaukums:" class="form-control other-input">
                             </div>
                             <input type="radio" id="source-radio-social" name="source" value="Sociālie tīkli">
                             <label for="source-radio-social">Sociālie tīkli</label><br>
@@ -299,15 +365,55 @@
                             <label for="yes-no-radio-no">Nē</label>
                         </div>
                         <center>
-                            <button onclick="SubForm(event)" type="submit" class="btn btn-primary submit-button">Sūtīt pieteikumu</button>
+                            <button onclick="SubForm(event)" type="submit" id="submitBtn" class="btn btn-primary submit-button">Sūtīt pieteikumu</button>
                         </center>
                     </form>
+                    <div class="popup-container" id="termsPopupContainer">
+                        <div class="popup" id="termsPopup">
+                            <h3>Izlozes nosacījumi: </h3>
+                            <p>• Katra persona var piedalīties izlozē tikai vienu reizi (aizpildot anketu vairākas reizes, tas nepalielina iespēju laimēt).</p>
+                            <p>• Izloze notiek vienu reizi kalendārajā mēnesī, 10.datumā (vai tuvākajā darba dienā pēc tā), izlozējot starp iepriekšējā mēneša pieteikumiem.</p>
+                            <p>• Aizpildot pieteikuma anketu klients piekrīt saņemt zvanu un/vai epasta ziņu saistībā ar "MONTEA INSURANCE BROKERS" SIA piedāvājumiem.</p>
+                            <p>• Klienta dati tiks apstrādati atbilstoši privātuma politikas noteikumiem un netiks izpausti trešajām personām.</p>
+                            <p>• Izlozes uzvarētājs katru mēnesi tiks paziņots sociālo tīklu profilos un ar uzvarētāju sazināsimies personīgi.</p>
+                            <p>• "MONTEA INSURANCE BROKERS " SIA neuzņemas atbildību par nekorekti aizpildītiem personas datiem, kuru dēļ izlozes uzvarētājs nevar saņemt laimestu.</p>
+                            <p>• Izlozes balvā - ģimenes fotosesija 1h garumā profesionāla fotogrāfa pavadībā.</p>
+                            <button id="agreeButton">Piekrītu</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="alert alert-success success-message d-none" role="alert">
+            Paldies, pieteikums nosūtīts :)
+        </div>
+        <div class="alert alert-danger mt-3 d-none" role="alert">
+            Atvainojiet, notikusi kļūda :(
+        </div>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        </div>
     </section>
+    <script>
+        const participateRadio = document.querySelector('input[name="PiedalisiesIzloze"]');
+        const submitBtn = document.getElementById('submitBtn');
+        const termsPopupContainer = document.getElementById('termsPopupContainer');
+        const termsPopup = document.getElementById('termsPopup');
+        const agreeButton = document.getElementById('agreeButton');
+
+        participateRadio.addEventListener('change', () => {
+            if (participateRadio.value === 'no') {
+                termsPopupContainer.style.display = 'none';
+            } else {
+                termsPopupContainer.style.display = 'flex';
+            }
+        });
+
+        agreeButton.addEventListener('click', () => {
+            termsPopupContainer.style.display = 'none';
+        });
+    </script>
     <section>
-        <div class="raksts page-break">
+        <div class="raksts page-break" style="margin-top: -50px;">
             <img src="https://montea.lv/wp-content/themes/montea/assets/svg/rakstsB.svg" class="no-lazy-load" alt="Raksts">
             <img src="https://montea.lv/wp-content/themes/montea/assets/svg/rakstsB.svg" class="no-lazy-load" alt="Raksts">
             <img src="https://montea.lv/wp-content/themes/montea/assets/svg/rakstsB.svg" class="no-lazy-load" alt="Raksts">
@@ -391,6 +497,7 @@
         </div>
     </div>
 </footer>
+
 <script>
     $( document ).ready(function() {
         $('.menu .close-btn').click(function() {
