@@ -8,7 +8,7 @@
   <style>
     body {
       background-color: #f5f5f5;
-      font-family: 'Merriweather', serif;
+      font-family: Merriweather, serif;
     }
 
     h1 {
@@ -245,6 +245,41 @@
         height: 120%;
       }
     }
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+    .popup {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      max-width: 80%;
+      max-height: 80%;
+      overflow: auto;
+    }
+    .terms {
+      margin-top: 10px;
+    }
+    /*-------------custom scrollbar-------------------*/
+    ::-webkit-scrollbar{
+      width: 15px;
+    }
+    ::-webkit-scrollbar-track{
+      background: #95ECFD;
+    }
+    ::-webkit-scrollbar-thumb{
+      background: linear-gradient(#000000, #C7F5FE);
+      border-radius: 10px;
+    }
   </style>
   <script
           src="https://code.jquery.com/jquery-3.7.0.js"
@@ -304,20 +339,20 @@
   <div class="formtext">
     <form id="myForm">
       <div class="form-group">
-        <input type="text" id="name" placeholder="Vārds" name="name" required class="form-control">
+        <input type="text" id="name" placeholder="Vārds" name="name"  class="form-control" required>
       </div>
       <div class="form-group">
         <input type="text" id="surname" placeholder="Uzvārds" name="surname"  class="form-control">
       </div>
       <div class="form-group">
-        <input type="tel" id="phone" placeholder="Telefona numurs" name="phone" required class="form-control">
+        <input type="tel" id="phone" placeholder="Telefona numurs" name="phone"  class="form-control" required>
       </div>
       <div class="form-group">
         <input type="email" id="email" placeholder="E-pasts" name="email"  class="form-control">
       </div>
       <div class="form-group">
         <label for="source-radio">Kur uzzināji par šo piedāvājumu?</label><br>
-        <input type="radio" id="source-radio-ad" name="source" value="Medicīna" required>
+        <input type="radio" id="source-radio-ad" name="source" value="Medicīna">
         <label for="source-radio-ad">Medicīnas iestāde</label><br>
         <div class="form-group" id="otherInputContainer1" style="display: none;">
           <input type="text" id="Iestade" name="Iestade" placeholder="Iestādes nosaukums:" class="form-control other-input">
@@ -335,16 +370,30 @@
         <input type="text" id="otherText" name="otherText" placeholder="Cits:" class="form-control other-input">
       </div>
       <div class="form-group">
-        <label for="yes-no-radio">Vai vēlies piedalīties izlozē?</label><br>
+        <label for="yes-no-radio">Vai vēlies piedalīties izlozē?*</label><br>
         <input type="radio" id="yes-no-radio-yes" name="PiedalisiesIzloze" value="Yes" required>
         <label for="yes-no-radio-yes">Jā</label><br>
-        <input type="radio" id="yes-no-radio-no" name="PiedalisiesIzloze" value="No">
+        <input type="radio" id="yes-no-radio-no" name="PiedalisiesIzloze" value="No" required>
         <label for="yes-no-radio-no">Nē</label>
       </div>
       <center>
-        <button onclick="SubForm(event)" type="submit" class="btn btn-primary submit-button">Sūtīt pieteikumu</button>
+        <button onclick="SubForm(event)" type="submit" id="submitBtn" class="btn btn-primary submit-button">Sūtīt pieteikumu</button>
       </center>
+
     </form>
+    <div class="popup-container" id="termsPopupContainer">
+      <div class="popup" id="termsPopup">
+        <h3>Izlozes nosacījumi: </h3>
+        <p>• Katra persona var piedalīties izlozē tikai vienu reizi (aizpildot anketu vairākas reizes, tas nepalielina iespēju laimēt).</p>
+        <p>• Izloze notiek vienu reizi kalendārajā mēnesī, 10.datumā (vai tuvākajā darba dienā pēc tā), izlozējot starp iepriekšējā mēneša pieteikumiem.</p>
+        <p>• Aizpildot pieteikuma anketu klients piekrīt saņemt zvanu un/vai epasta ziņu saistībā ar "MONTEA INSURANCE BROKERS" SIA piedāvājumiem.</p>
+        <p>• Klienta dati tiks apstrādati atbilstoši privātuma politikas noteikumiem un netiks izpausti trešajām personām.</p>
+        <p>• Izlozes uzvarētājs katru mēnesi tiks paziņots sociālo tīklu profilos un ar uzvarētāju sazināsimies personīgi.</p>
+        <p>• "MONTEA INSURANCE BROKERS " SIA neuzņemas atbildību par nekorekti aizpildītiem personas datiem, kuru dēļ izlozes uzvarētājs nevar saņemt laimestu.</p>
+        <p>• Izlozes balvā - ģimenes fotosesija 1h garumā profesionāla fotogrāfa pavadībā.</p>
+        <button id="agreeButton">Piekrītu</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -357,6 +406,25 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   </div>
 </section>
+<script>
+  const participateRadio = document.querySelector('input[name="PiedalisiesIzloze"]');
+  const submitBtn = document.getElementById('submitBtn');
+  const termsPopupContainer = document.getElementById('termsPopupContainer');
+  const termsPopup = document.getElementById('termsPopup');
+  const agreeButton = document.getElementById('agreeButton');
+
+  participateRadio.addEventListener('change', () => {
+    if (participateRadio.value === 'no') {
+      termsPopupContainer.style.display = 'none';
+    } else {
+      termsPopupContainer.style.display = 'flex';
+    }
+  });
+
+  agreeButton.addEventListener('click', () => {
+    termsPopupContainer.style.display = 'none';
+  });
+</script>
 <script>
   const sourceRadioOther = document.getElementById('source-radio-other');
   const sourceRadioAd= document.getElementById('source-radio-ad');
